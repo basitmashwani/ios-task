@@ -30,7 +30,17 @@ Setup local git repository and commit your changes
  I have added some screenshots to the repo. Details are following.
  
  1. "color-shades-items" - I have added some color to each component of CollectionViewCell to get a clear idea that every item is taking appropriate space.
+ ![Color-shades-item](color-shades-items.png)
  2. "with-image-10-3 -Aspect" - I have changed the aspect ratio of the image to 10:3 to see whether the cell in the screen is shrinking and items are showing properly.
+  ![Aspect ratio 10:3 ](with-image-10-3 -Aspect.png)
+
  3. "with-large-title" - I added a dummy text to the title to check the 2 line validation and after that, it should start cutting.
+   ![Large title](with-large-title.png)
+
  4. "with-single-line" - For testing I just added a single line description to check the self-sizing of the cell.
+    ![Single line](with-single-line.png)
+
  5. "screenshot-fix" - Final lookup of the screen after the fix.
+ 
+    ![fix](screenshot-fix.png)
+
