@@ -20,7 +20,18 @@ class CampaignListingView: UICollectionView {
         dataSource = campaignDataSource
         delegate = campaignDataSource
         strongDataSource = campaignDataSource
+        setupCampaignLayout()
         reloadData()
+    }
+    
+    private func setupCampaignLayout() {
+        let campaignFlowLayout = CampaignFlowLayout()
+        campaignFlowLayout.scrollDirection = .vertical
+        campaignFlowLayout.sectionInsetReference = .fromContentInset
+        campaignFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        campaignFlowLayout.minimumLineSpacing = 0
+        collectionViewLayout = campaignFlowLayout
+        contentInsetAdjustmentBehavior = .always
     }
 
     struct Campaign {
@@ -79,10 +90,10 @@ class ListingDataSource: NSObject, UICollectionViewDataSource, UICollectionViewD
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 450)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return  CGSize(width: collectionView.frame.size.width, height: 450)
+//    }
 
 }
 
@@ -104,8 +115,10 @@ class LoadingDataSource: NSObject, UICollectionViewDataSource, UICollectionViewD
                                                   for: indexPath)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return collectionView.frame.size
+//    }
+    
+
 }

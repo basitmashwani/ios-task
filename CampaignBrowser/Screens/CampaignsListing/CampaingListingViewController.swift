@@ -17,13 +17,11 @@ class CampaignListingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         assert(typedView != nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         // Load the campaign list and display it as soon as it is available.
         ServiceLocator.instance.networkingService
             .createObservableResponse(request: CampaignListingRequest())
